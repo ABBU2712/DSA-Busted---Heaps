@@ -1,4 +1,4 @@
-Given an array and an integer K, find the maximum for each and every contiguous subarray of size k.
+#Given an array and an integer K, find the maximum for each and every contiguous subarray of size k.
 def printMax(arr, n, k):
     max = 0
    
