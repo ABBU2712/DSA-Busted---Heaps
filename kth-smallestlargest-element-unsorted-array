@@ -1,0 +1,5 @@
+#Given an array and a number k where k is smaller than the size of the array, we need to find the k’th smallest element in the given array. It is given that all array elements are distinct.
+def ksmall(arr,k,n):
+    arr.sort()
+    return arr[k-1] #For obtainining k th samellest
+    
