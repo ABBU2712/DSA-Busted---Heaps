@@ -1,0 +1,21 @@
+#Given K sorted arrays arranged in the form of a matrix of size K*K. The task is to merge them into one sorted array.
+def mergeKArrays(self, numbers, n):
+        n=len(numbers)
+        h=min_heap()
+        
+        #adding arrays to the heap.
+        for i in range(n):
+            h.add(numbers[i][0],i,0)
+        arr=[]
+        
+        #using a loop while heap is not empty.
+        while(h.available()):
+            
+            val,i,j = h.pop()
+            #adding the element at current in list.
+            arr.append(val)
+            if(j+1 < len(numbers[i]) ):
+                h.add(numbers[i][j+1],i,j+1)
+                
+        #returning the list.
+        return arr
